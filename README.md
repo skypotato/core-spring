@@ -6,7 +6,7 @@
 ## SOLID 원칙
 - SRP(Single responsibility principle) : 단일 책임 원칙
 - OCP(Open/closed principle) : 개발-폐쇄 원칙
-- 
+- LSP(Liskov substitution principle) : 리스코프 치환 원칙
 ### SRP(Single responsibility principle) : 단일 책임 원칙
 - 한 클래스는 하나의 책임만 가져야 한다.
 - 하나의 책임이라는 것은 모호하다
@@ -21,3 +21,8 @@
 - 구현의 분리를 생각해보면 이해하기 수월하다.
 - 다형성을 사용하더라도 OCP 원칙을 지킬 수는 없다.
 - 객체를 생성하고, 연관관계를 맺어주는 별도의 조립, 설정자가 필요하다.
+### LSP(Liskov substitution principle) : 리스코프 치환 원칙
+- 프로그램의 객체는 프로그램의 정확성을 깨뜨리지 않으면서 하위 타입의 인스턴스로 바꿀 수 있어야 한다.
+- 다형성에서 하위 클래스는 인터페이스 규약을 다 지켜야한다는 것, 다형성을 지원하기 위한 원칙, 인터페이스를 구현한 구현체는 믿고 사용하려면, 이 원칙이 필요하다.
+- 즉,프로그램 상의 문제가 발생하지 않지만 각 프로젝트에서 협의된 개발규칙 같은 것이다.
+### ISP(Inter)
