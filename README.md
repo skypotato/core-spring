@@ -8,6 +8,7 @@
 - OCP(Open/closed principle) : 개발-폐쇄 원칙
 - LSP(Liskov substitution principle) : 리스코프 치환 원칙
 - ISP(Interface segregation principle) : 인터페이스 분리 원칙
+- DIP(Dependency inversion principle) : 의존관계 역전 원칙
 ### SRP(Single responsibility principle) : 단일 책임 원칙
 - 한 클래스는 하나의 책임만 가져야 한다.
 - 하나의 책임이라는 것은 모호하다
@@ -30,3 +31,7 @@
 - 특정 클라이언트를 위한 인터페이스 여러 개가 범용 인터페이스 하나보다 낫다.
 - 여러 개로 분리할 경우 인터페이스 자체가 변해도 클라이언트에 미치는 영향이 미미하다.
 - 인터페이스가 명확해지고, 대체 가능성이 높아진다.
+### DIP(Dependency inversion principle) : 의존관계 역전 원칙
+- 프로그래머는 "추상화에 의존해야지, 구체화에 의존하면 안된다." 의족성 주입은 이 원칙을 따르는 방법 중 하나다.
+- 즉, 구현 클래스에 의존하지 말고, 인터페이스에 의존하라는 뜻과 같다.
+- 강의에서 중요하게 이야기한 역할(Role)에 의존하게 한다는 것과 일맥상통하다. 객체 세상도 클라이언트가 인터페이스에 의존해야 유연하게 구현체를 변경할 수 있다. 구현체에 의존하게 되면 변경이 매우 어려워진다.
