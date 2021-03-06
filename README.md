@@ -40,3 +40,4 @@
 - iter + tab : for문 자동 생성
 - soutv + tab : Value 값에 대한 Print 
 - soutm + tab : Method 값에 대한 Print 
+Itar
