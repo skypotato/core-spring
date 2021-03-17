@@ -35,6 +35,35 @@
 - 즉, 구현 클래스에 의존하지 말고, 인터페이스에 의존하라는 뜻과 같다.
 - 강의에서 중요하게 이야기한 역할(Role)에 의존하게 한다는 것과 일맥상통하다. 객체 세상도 클라이언트가 인터페이스에 의존해야 유연하게 구현체를 변경할 수 있다. 구현체에 의존하게 되면 변경이 매우 어려워진다.
 
+## 싱글톤 패턴
+### 구조
+~~~ java
+public class SingletonService {
+
+    private static final SingletonService instance = new SingletonService();
+
+    public static SingletonService getInstance(){
+        return instance;
+    }
+
+    private SingletonService(){
+    }
+
+    public void logic(){
+        // logic Start
+    }
+}
+~~~
+### 문제점
+- 싱글톤 패턴을 구현하는 코드 자체가 많아진다.
+- 의존관계상 클라이언트가 구체 클래스에 의존한다. -> DIP 위반
+- 클라이언트가 구체 클래스에 의존해서 OCP 원칙을 위반할 가능성이 높다.
+- 테스트하기 어렵다.
+- 내부 속성을 변경하거나 초기화 하기 어렵다.
+- private 생성자로 자식 클래스를 만들기 어렵다.
+- 유연성이 떨어진다.
+- 안티패턴으로 불리기도 한다.
+
 ## IntelliJ 단축키
 - command + e : 최근 히스토리
 - iter + tab : for문 자동 생성
