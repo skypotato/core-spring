@@ -1,6 +1,7 @@
 package hello.core.singleton;
 
 import hello.core.AppConfig;
+import hello.core.member.MemberRepository;
 import hello.core.member.MemberServiceImpl;
 import hello.core.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
@@ -14,9 +15,13 @@ public class ConfigurationSingletonTest {
     void configurationTest(){
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
+        MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
+
         MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
         OrderServiceImpl orderService = ac.getBean("orderService", OrderServiceImpl.class);
 
         Assertions.assertThat(memberService.getMemberRepository()).isSameAs(orderService.getMemberRepository());
+        Assertions.assertThat(memberRepository).isSameAs(memberService.getMemberRepository());
+        Assertions.assertThat(memberRepository).isSameAs(orderService.getMemberRepository());
     }
 }
