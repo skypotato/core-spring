@@ -5,6 +5,7 @@ import hello.core.member.MemberRepository;
 import hello.core.member.MemberServiceImpl;
 import hello.core.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class ConfigurationSingletonTest {
 
     @Test
-    void configurationTest(){
+    void configurationTest() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
         MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
@@ -23,5 +24,16 @@ public class ConfigurationSingletonTest {
         Assertions.assertThat(memberService.getMemberRepository()).isSameAs(orderService.getMemberRepository());
         Assertions.assertThat(memberRepository).isSameAs(memberService.getMemberRepository());
         Assertions.assertThat(memberRepository).isSameAs(orderService.getMemberRepository());
+    }
+
+    @Test
+    @DisplayName("Configuration에 등록된 클래스 확")
+    void configurationDeep() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppConfig bean = ac.getBean(AppConfig.class);
+
+        System.out.println("bean.getClass() = " + bean.getClass());
+
+        Assertions.assertThat(AppConfig.class).isNotSameAs(bean.getClass());
     }
 }
