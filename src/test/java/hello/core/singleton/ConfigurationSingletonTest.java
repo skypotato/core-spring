@@ -27,7 +27,7 @@ public class ConfigurationSingletonTest {
     }
 
     @Test
-    @DisplayName("Configuration에 등록된 클래스 확")
+    @DisplayName("@Configuration 동작 확인")
     void configurationDeep() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
         AppConfig bean = ac.getBean(AppConfig.class);
