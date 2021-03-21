@@ -72,7 +72,6 @@ public class SingletonService {
   - 필드 대신에 자바에서 공유되지 않은 지역변수, 파라미터, ThreadLocal 등을 사용해야한다.
 ## IntelliJ 단축키
 - command + e : 최근 히스토리
-- iter + tab : for문 자동 생성
 - soutv + tab : Value 값에 대한 Print 
 - soutm + tab : Method 값에 대한 Print 
 - itar + tab : for문 생성.
