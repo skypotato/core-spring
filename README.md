@@ -70,6 +70,12 @@ public class SingletonService {
   - 특정 클라이언트가 값을 변경할 수 있는 필드가 있으면 안된다.
   - 가급적 읽기만 가능해야 한다.
   - 필드 대신에 자바에서 공유되지 않은 지역변수, 파라미터, ThreadLocal 등을 사용해야한다.
+## 의존관계 주입방법
+- 생성자 주입
+- 수정자(setter) 주입
+- 필드 주입
+- 일반 메서드 주
+
 ## IntelliJ 단축키
 - command + e : 최근 히스토리 팝업 
 - soutv + tab : Value 값에 대한 Print 
