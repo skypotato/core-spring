@@ -81,6 +81,8 @@ public class SingletonService {
   - "불변, 필수" 의존관계에서 사용
 ### 수정자 주입
 - 특징
+### 필드 주입
+- 특징
 
 ## IntelliJ 단축키
 - command + e : 최근 히스토리 팝업 
