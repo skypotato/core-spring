@@ -15,10 +15,12 @@ public class PrototypeTest {
     @Test
     void prototypeBeanFind(){
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(PrototypeTest.PrototypeBean.class);
+
         System.out.println("find prototypeBean1");
         PrototypeBean bean1 = ac.getBean(PrototypeBean.class);
         System.out.println("find prototypeBean2");
         PrototypeBean bean2 = ac.getBean(PrototypeBean.class);
+
         System.out.println("bean1 = " + bean1);
         System.out.println("bean2 = " + bean2);
         assertThat(bean1).isNotSameAs(bean2);
