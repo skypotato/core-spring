@@ -80,6 +80,10 @@ public class SingletonService {
   - 생성자 호출 시점에서 딱 1번만 호출되는 것이 보장된다.
   - "불변, 필수" 의존관계에서 사용
 
+## DI/DL(Dependency Injection / Dependency Lookup)
+- DI(Dependency Injection) : 의존관계를 외부에서 주입받는 것.
+- DL(Dependency Lookup) : 직접 필요한 의존관계를 찾는 것.
+
 ## IntelliJ 단축키
 - command + e : 최근 히스토리 팝업 
 - soutv + tab : Value 값에 대한 Print 
