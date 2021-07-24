@@ -25,7 +25,6 @@ public class LogDemoController {
 
         myLogger.log("contorller test");
         logDemoService.logic("testId");
-
         return "OK";
     }
 }
