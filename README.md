@@ -87,6 +87,8 @@ public class SingletonService {
 ## IntelliJ 단축키
 - command + e : 최근 히스토리 팝업 
 - command + shift + f : 전체 검색
+- command + k : svn, git commit
+- command + t : svn, git update
 - soutv + tab : Value 값에 대한 Print 
 - soutm + tab : Method 값에 대한 Print 
 - itar + tab : for문 생성.
