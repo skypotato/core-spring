@@ -85,7 +85,7 @@ public class SingletonService {
 - DL(Dependency Lookup) : 직접 필요한 의존관계를 찾는 것.
 
 ## IntelliJ 단축키
-- command + l : 라인 검색
+- command + l : 라인 검색.
 - command + e : 최근 히스토리 팝업 
 - command + shift + f : 전체 검색
 - command + shift + r : 전체 바꾸기
